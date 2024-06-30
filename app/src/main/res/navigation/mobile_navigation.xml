@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/animeListFragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.myanimelist.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.myanimelist.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.myanimelist.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/animeListFragment"
+        android:name="com.example.myanimelist.ui.animeList.AnimeListFragment"
+        android:label="fragment_anime_list"
+        tools:layout="@layout/fragment_anime_list" />
+    <fragment
+        android:id="@+id/animeDetailFragment"
+        android:name="com.example.myanimelist.ui.AnimeDetailFragment"
+        android:label="fragment_anime_detail"
+        tools:layout="@layout/fragment_anime_detail" />
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.example.myanimelist.ui.characters.CharactersFragment"
+        android:label="fragment_characters"
+        tools:layout="@layout/fragment_characters" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/reviewsFragment"
+        android:name="com.example.myanimelist.ui.reviews.ReviewsFragment"
+        android:label="fragment_reviews"
+        tools:layout="@layout/fragment_reviews" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/charactersDetailFragment"
+        android:name="com.example.myanimelist.ui.characters.detail.CharactersDetailFragment"
+        android:label="fragment_characters_detail"
+        tools:layout="@layout/fragment_characters_detail" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/reviewDetailFragment"
+        android:name="com.example.myanimelist.ui.reviews.detail.ReviewDetailFragment"
+        android:label="fragment_review_detail"
+        tools:layout="@layout/fragment_review_detail" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/mangaListFragment"
+        android:name="com.example.myanimelist.ui.mangaList.MangaListFragment"
+        android:label="fragment_manga_list"
+        tools:layout="@layout/fragment_manga_list" />
+</navigation>
