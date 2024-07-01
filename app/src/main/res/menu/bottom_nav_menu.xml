@@ -9,26 +9,18 @@
         android:title="@string/anime_list" />
 
     <item
+        android:id="@+id/mangaListFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_detail"
+        android:title="@string/manga_list" />
+
+    <item
         android:id="@+id/charactersFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/ic_characters"
-        android:title="@string/characters"
-        />
-
-    <item
-        android:id="@+id/mangaListFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:title="@string/manga_list"
-        android:icon="@drawable/ic_detail"
-        />
-
-    <item
-        android:id="@+id/reviewsFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:icon="@drawable/ic_characters"
         android:title="@string/characters" />
+
 
 </menu>

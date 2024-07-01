@@ -2,9 +2,10 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    android:backgroundTint="@color/purple200"
     android:elevation="2dp"
     app:cardCornerRadius="20dp">
 
@@ -12,10 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imageAnime"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+        <ImageView
+            android:id="@+id/imageManga"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -24,34 +26,35 @@
 
         <TextView
             android:id="@+id/textTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:paddingEnd="10dp"
-            android:text="@string/anime_title"
+            android:text="Manga title"
             android:textSize="18sp"
             android:textStyle="italic"
-            app:layout_constraintStart_toEndOf="@id/imageAnime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageManga"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:text="@string/score"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/imageAnime"
+            app:layout_constraintStart_toEndOf="@id/imageManga"
             app:layout_constraintTop_toBottomOf="@id/textTitle" />
 
         <TextView
             android:id="@+id/textScore2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@id/textScore"
@@ -59,52 +62,53 @@
             tools:text="0.0" />
 
         <TextView
-            android:id="@+id/textType"
+            android:id="@+id/textGenre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:text="@string/type"
+            android:text="Genre:"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/imageAnime"
-            app:layout_constraintTop_toBottomOf="@id/textScore" />
+            app:layout_constraintStart_toEndOf="@id/imageManga"
+            app:layout_constraintTop_toBottomOf="@id/textScore2" />
 
         <TextView
-            android:id="@+id/textType2"
-            android:layout_width="wrap_content"
+            android:id="@+id/textGenre2"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@id/textType"
-            app:layout_constraintTop_toBottomOf="@id/textScore"
-            tools:text="Tv" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textGenre"
+            app:layout_constraintTop_toBottomOf="@id/textScore2"
+            tools:text="fantastic" />
 
         <TextView
-            android:id="@+id/textEpisodes"
+            android:id="@+id/textChapter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
-            android:text="@string/episodes"
+            android:text="@string/chapters"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/imageAnime"
-            app:layout_constraintTop_toBottomOf="@id/textType" />
+            app:layout_constraintStart_toEndOf="@id/imageManga"
+            app:layout_constraintTop_toBottomOf="@id/textGenre2" />
 
         <TextView
-            android:id="@+id/textEpisodes2"
+            android:id="@+id/textChapters2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@id/textEpisodes"
-            app:layout_constraintTop_toBottomOf="@id/textType"
-
+            app:layout_constraintStart_toEndOf="@id/textChapter"
+            app:layout_constraintTop_toBottomOf="@id/textGenre2"
             tools:text="0" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

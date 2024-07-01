@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myanimelist.databinding.FragmentAnimeListBinding
-import com.example.myanimelist.ui.AnimeDetailAdapter
+import com.example.myanimelist.ui.animeList.adapter.AnimeDetailAdapter
 import com.example.myanimelist.ui.animeList.adapter.AnimeListAdapter
 
 class AnimeListFragment : Fragment() {

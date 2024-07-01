@@ -43,8 +43,6 @@ class AnimeListViewModel:ViewModel() {
             val response: Response<AnimeSearchResponse> = repository.getAnimes()
             if (response.isSuccessful) {
                 _animeResult.postValue(response.body())
-            } else {
-
             }
         }
     }

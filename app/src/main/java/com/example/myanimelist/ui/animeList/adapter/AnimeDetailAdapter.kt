@@ -1,4 +1,4 @@
-package com.example.myanimelist.ui
+package com.example.myanimelist.ui.animeList.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,17 +6,23 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.myanimelist.databinding.ItemAnimeDetailBinding
+import com.example.myanimelist.databinding.ItemAnimeTopBinding
 import com.example.myanimelist.ui.retrofit.model.AnimeDetailResponse
 
 class AnimeDetailAdapter : RecyclerView.Adapter<AnimeDetailAdapter.AnimeDetailViewHolder>() {
 
     private val diffUtilCallBack = object : DiffUtil.ItemCallback<AnimeDetailResponse>() {
-        override fun areItemsTheSame(oldItem: AnimeDetailResponse, newItem: AnimeDetailResponse): Boolean {
+        override fun areItemsTheSame(
+            oldItem: AnimeDetailResponse,
+            newItem: AnimeDetailResponse
+        ): Boolean {
             return oldItem.mal_id == newItem.mal_id
         }
 
-        override fun areContentsTheSame(oldItem: AnimeDetailResponse, newItem: AnimeDetailResponse): Boolean {
+        override fun areContentsTheSame(
+            oldItem: AnimeDetailResponse,
+            newItem: AnimeDetailResponse
+        ): Boolean {
             return oldItem == newItem
         }
     }
@@ -28,7 +34,8 @@ class AnimeDetailAdapter : RecyclerView.Adapter<AnimeDetailAdapter.AnimeDetailVi
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimeDetailViewHolder {
-        val binding = ItemAnimeDetailBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemAnimeTopBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return AnimeDetailViewHolder(binding)
     }
 
@@ -41,13 +48,13 @@ class AnimeDetailAdapter : RecyclerView.Adapter<AnimeDetailAdapter.AnimeDetailVi
         holder.bind(animeDetail)
     }
 
-    inner class AnimeDetailViewHolder(private val binding: ItemAnimeDetailBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class AnimeDetailViewHolder(private val binding: ItemAnimeTopBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(animeDetail: AnimeDetailResponse) {
             binding.apply {
                 textTitle.text = animeDetail.title
                 textEpisodes2.text = animeDetail.episodes.toString()
-                textType2.text=animeDetail.type
-                 textScore2.text=animeDetail.score.toString()
+                textScore2.text = animeDetail.score.toString()
                 Glide.with(binding.root)
                     .load(animeDetail.images.jpg.image_url)
                     .into(imageAnime)

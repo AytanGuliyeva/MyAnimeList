@@ -6,11 +6,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.myanimelist.ui.retrofit.Repository
-import com.example.myanimelist.ui.retrofit.model.Characters
 import com.example.myanimelist.ui.retrofit.model.Manga
 import kotlinx.coroutines.launch
 
-class MangaListViewModel:ViewModel() {
+class MangaListViewModel : ViewModel() {
     private val repository = Repository()
 
     private val _mangaList = MutableLiveData<List<Manga>>()

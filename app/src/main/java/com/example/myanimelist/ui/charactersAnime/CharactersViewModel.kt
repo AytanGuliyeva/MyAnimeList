@@ -1,4 +1,4 @@
-package com.example.myanimelist.ui.characters
+package com.example.myanimelist.ui.charactersAnime
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -7,9 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.myanimelist.ui.retrofit.Repository
 import com.example.myanimelist.ui.retrofit.model.Characters
-import com.example.myanimelist.ui.retrofit.model.CharactersResponse
 import kotlinx.coroutines.launch
-import retrofit2.Response
 
 class CharactersViewModel : ViewModel() {
     private val repository = Repository()
